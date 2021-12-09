@@ -2,6 +2,7 @@
 
 import os
 import random
+import pipes
 
 def getFiles(path):
     files = []
@@ -27,8 +28,7 @@ def playEpisode(episode):
     # https://elinux.org/Omxplayer
     # -b blank
     # -o output
-    escaped = episode.replace("'", "\'")
-    cmd = "omxplayer -b -o hdmi '" + escaped + "'"
+    cmd = "omxplayer -b -o hdmi {}".format(pipes.quote(episode))
     status = os.system(cmd)
     if status == 2:
         print("exiting")
