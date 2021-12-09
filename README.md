@@ -46,9 +46,12 @@ sudo chown -R pi:pi /mnt/usb
 # find the name of your usb (probably /dev/sda1, but confirm)
 sudo fdisk -l
 
-# replace /dev/sda1
+# mount (replace /dev/sda1)
 sudo mount /dev/sda1 /mnt/usb -o uid=pi,gid=pi
 
-# when you're done copying
+# copy files and folders into /home/pi/video (it searches recursively)
+mkdir /home/pi/video
+
+# unmount when you're done copying
 sudo umount /mnt/usb
 ```

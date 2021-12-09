@@ -50,6 +50,7 @@ def main():
         else:
             episode = shuffled.pop()
             playing = playEpisode(episode)
+
     print("All done playing")
 
 main()
