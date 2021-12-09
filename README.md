@@ -31,9 +31,12 @@ sudo apt install omxplayer
 # determine ip address
 ifconfig
 
-# copy over config files (replace IP address)
-scp .bash_aliases pi@192.168.x.x:/home/pi/
-scp startup.py pi@192.168.x.x:/home/pi/
+# ssh and pull this repo to get the latest scripts and config
+ssh pi@192.168.x.x
+git clone https://github.com/mpaulweeks/simpsons-box.git
+
+# copy bash_aliases
+cp .bash_aliases /home/pi/
 ```
 
 ## copying media from usb
