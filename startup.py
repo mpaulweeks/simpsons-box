@@ -27,7 +27,8 @@ def playEpisode(episode):
     # https://elinux.org/Omxplayer
     # -b blank
     # -o output
-    cmd = "omxplayer -b -o hdmi '"+episode+"'"
+    escaped = episode.replace("'", "\'")
+    cmd = "omxplayer -b -o hdmi '" + escaped + "'"
     status = os.system(cmd)
     if status == 2:
         print("exiting")
