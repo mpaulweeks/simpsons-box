@@ -29,7 +29,7 @@ def playEpisode(episode):
     # -b blank
     # -o output
     cmd = "omxplayer -b -o hdmi {} > /dev/null 2>&1".format(pipes.quote(episode))
-    print(repr(cmd))
+    # print(repr(cmd))
     status = os.system(cmd)
     if status == 2:
         print("exiting")
