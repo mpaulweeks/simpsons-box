@@ -23,6 +23,7 @@ def shuffleEpisodes(files):
     return shuffled
 
 def playEpisode(episode):
+    print("Starting " + episode.split("/").pop())
     # https://elinux.org/Omxplayer
     # -b blank
     # -o output
