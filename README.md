@@ -58,3 +58,15 @@ mkdir /home/pi/video
 # unmount when you're done copying
 sudo umount /mnt/usb
 ```
+
+## (optional) increase font size
+
+```bash
+sudo vi /etc/default/console-setup
+
+# update these two values
+FONTFACE="Terminus"
+FONTSIZE="16x32"
+
+# reboot to see changes
+```
