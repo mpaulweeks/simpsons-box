@@ -25,7 +25,7 @@ def shuffleEpisodes(files):
 
 def playEpisode(episode):
     print("Starting " + episode.split("/").pop())
-    cmd = "vlc {} > /dev/null 2>&1".format(pipes.quote(episode))
+    cmd = "cvlc {} vlc://quit > /dev/null 2>&1".format(pipes.quote(episode))
     # print(repr(cmd))
     status = os.system(cmd)
     if status == 2:
