@@ -3,4 +3,8 @@
 echo "Running ~/simpsons-box/.bash_aliases"
 ifconfig
 sleep 5
-sudo python /home/pi/simpsons-box/startup.py
+cd /home/pi/simpsons-box/
+echo "Updating..."
+git pull
+echo "Starting..."
+sudo python startup.py
