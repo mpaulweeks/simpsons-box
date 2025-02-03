@@ -1,6 +1,7 @@
-# ln -s /home/pi/simpsons-box/.profile /home/pi/.profile
+# Put this in ~/.profile
+# /home/pi/simpsons-box/bash.sh
 
-echo "Running ~/simpsons-box/.profile"
+echo "Running ~/simpsons-box/bash.sh"
 ifconfig
 sleep 2
 
