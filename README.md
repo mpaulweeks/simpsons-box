@@ -14,7 +14,7 @@ Image the official Raspberry PI Lite image (no GUI required) on to a microSD car
 First boot takes a while to setup and expand the filesystem. Default login credentials:
 
 - pi
-- raspberyy
+- raspberry
 
 ```bash
 # Use the config GUI to enable auto-boot and ssh
@@ -24,6 +24,12 @@ sudo apt update
 sudo apt upgrade
 sudo apt install omxplayer
 ```
+
+## raspi-config
+
+- System Options > Wireless LAN
+- Interface Options > SSH > Enable
+- Advanced Options > Expand Filesystem
 
 ## ssh in files
 
