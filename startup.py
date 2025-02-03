@@ -25,10 +25,7 @@ def shuffleEpisodes(files):
 
 def playEpisode(episode):
     print("Starting " + episode.split("/").pop())
-    # https://elinux.org/Omxplayer
-    # -b blank
-    # -o output
-    cmd = "omxplayer -b -o hdmi {} > /dev/null 2>&1".format(pipes.quote(episode))
+    cmd = "vlc {} > /dev/null 2>&1".format(pipes.quote(episode))
     # print(repr(cmd))
     status = os.system(cmd)
     if status == 2:
