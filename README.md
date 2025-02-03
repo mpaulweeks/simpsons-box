@@ -28,6 +28,7 @@ sudo apt install omxplayer
 ## raspi-config
 
 - System Options > Wireless LAN
+- System Options > Boot / Auto Login > Console Autologin
 - Interface Options > SSH > Enable
 - Advanced Options > Expand Filesystem
 

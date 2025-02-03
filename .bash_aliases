@@ -1,4 +1,4 @@
-# /home/pi/.bashrc
+# ln -s /home/pi/simpsons-box/.bash_aliases /home/pi/.bash_aliases
 
 echo "Running ~/simpsons-box/.bash_aliases"
 ifconfig
