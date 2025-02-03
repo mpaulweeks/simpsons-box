@@ -24,10 +24,10 @@ def shuffleEpisodes(files):
 
 def playEpisode(episode):
     print("Starting " + episode.split("/").pop())
-    cmd = ['cvlc', episode, 'vlc://quit']
+    cmd = ["cvlc", episode, "vlc://quit"]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     for line in p.stdout:
-        print line
+        print(line)
     p.wait()
     if p.returncode == 2:
         print("exiting")
