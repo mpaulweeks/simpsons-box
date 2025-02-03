@@ -12,4 +12,4 @@ sleep 2
 
 echo "Starting..."
 sleep 2
-sudo python startup.py
+python startup.py
