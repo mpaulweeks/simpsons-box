@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-import os
 import random
-import pipes
+import subprocess
 
 def getFiles(path):
     files = []
@@ -25,10 +24,12 @@ def shuffleEpisodes(files):
 
 def playEpisode(episode):
     print("Starting " + episode.split("/").pop())
-    cmd = "cvlc {} vlc://quit > /dev/null 2>&1".format(pipes.quote(episode))
-    # print(repr(cmd))
-    status = os.system(cmd)
-    if status == 2:
+    cmd = ['cvlc', episode, 'vlc://quit']
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    for line in p.stdout:
+        print line
+    p.wait()
+    if p.returncode == 2:
         print("exiting")
         return False
     return True
